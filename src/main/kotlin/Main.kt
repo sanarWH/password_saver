@@ -1,3 +1,7 @@
+import java.io.BufferedWriter
+import java.io.File
+import DataBase as DataBase
+
 fun main() {
     println("Привет! Это генератор случайных паролей из цифр, букв в нижнем и верхнем регистре.")
     Thread.sleep(1000) //задержка для красоты
@@ -9,6 +13,8 @@ fun main() {
     println("Ваш случайно сгенерированный пароль: $password")
     val encryptPassword = PasswordEncryption(password).saveEncryptPassword() //сохраняю сгененрированный и зашифрованный пароль в переменную для дальнейшего хранения
 //    val decrypt = PasswordDecryption(encryptPassword).getDecryptionPassword() //расшифровываю пароль
+    val a: File = DataBase().savePasswordToDataBase(encryptPassword) //сохраняю зашифрованный пароль в txt
+    DataBase().readPasswordFromDataBase(a, 0)
 
 
 
