@@ -1,2 +1,4 @@
-class PasswordDecryption {
+//тут будет шифрование пароля на базе ключевого слова и метдов шифрования
+fun PasswordDecryption() {
+
 }
